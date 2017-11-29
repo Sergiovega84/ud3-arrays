@@ -10,7 +10,7 @@ public class Main {
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("introducir texto: ");
         String texto = br.readLine();
-        String letra = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String letra = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
         int [] recuento = contarletras (texto,letra);
         visualizarRecuento(recuento, letra);
 
@@ -18,13 +18,13 @@ public class Main {
     private static void visualizarRecuento (int [] recuento, String letra){
         System.out.print("letra");
         System.out.println();
-        for (int i = 0; i < 26; i++) {
+        for (int i = 0; i < 27; i++) {
             System.out.println(letra.charAt(i)+": "+recuento[i]);
         }
     }
     private static int [] contarletras (String texto, String letra){
-        int [] recuento = new int[26];
-        for (int i = 0; i < 26 ; i++) {
+        int [] recuento = new int[27];
+        for (int i = 0; i < 27 ; i++) {
             recuento[i]=0;
         }
         for (int i = 0; i < texto.length(); i++) {
